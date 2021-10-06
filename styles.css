@@ -1,0 +1,126 @@
+*,
+*::before,
+::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: white;
+  margin-top: 300px;
+}
+nav {
+  color: hotpink;
+  margin-top: -100px;
+  display: flex;
+  font-size: 20px;
+  line-height: 30px;
+}
+li a {
+  color: hotpink;
+  text-decoration: none;
+}
+.wrapper {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  perspective: 1000px;
+}
+.cube-container {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+.cube {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #333;
+  background: rgba(150, 151, 175, 0.4);
+}
+.front {
+  transform: translateX(-150px) translateY(-150px) translateZ(150px);
+}
+.back {
+  transform: translateX(-150px) translateY(-150px) translateZ(-150px)
+    rotateY(180deg);
+}
+.right {
+  transform: translateY(-150px) rotateY(90deg);
+}
+.left {
+  transform: translateY(-150px) translateX(-300px) rotateY(270deg);
+}
+.bottom {
+  transform: translateX(-150px) rotateX(90deg);
+}
+.top {
+  transform: translateX(-150px) translateY(-300px) rotateX(270deg);
+}
+.cube-container {
+  transform: rotateX(90deg) rotateY(90deg);
+  background-color: red;
+}
+.cube::after {
+  content: "🖥";
+  font-size: 5em;
+  color: white;
+  font-weight: 200;
+}
+/* @media screen and(max-width:400px) {
+  .cube {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #333;
+    background: rgba(150, 151, 175, 0.4);
+  }
+  .front {
+    transform: translateX(-150px) translateY(-150px) translateZ(150px);
+  }
+  .back {
+    transform: translateX(-150px) translateY(-150px) translateZ(-150px)
+      rotateY(180deg);
+  }
+  .right {
+    transform: translateY(-150px) rotateY(90deg);
+  }
+  .left {
+    transform: translateY(-150px) translateX(-300px) rotateY(270deg);
+  }
+  .bottom {
+    transform: translateX(-150px) rotateX(90deg);
+  }
+  .top {
+    transform: translateX(-150px) translateY(-300px) rotateX(270deg);
+  }
+  .cube-container {
+    transform: rotateX(90deg) rotateY(90deg);
+    background-color: red;
+  }
+  .cube::after {
+    content: "🖥";
+    font-size: 5em;
+    color: white;
+    font-weight: 200;
+  }
+} */
