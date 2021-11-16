@@ -6,11 +6,11 @@
 }
 body {
   height: 100vh;
-  display: grid;
+  /* display: grid; */
   place-items: center;
   background-color: #000;
-
   font-family: "Ubuntu", sans-serif;
+  /* max-width: 1000px; */
 }
 header {
   min-height: 100vh;
@@ -26,6 +26,7 @@ h1 {
 h2 {
   color: rgb(125, 207, 235);
   font-size: 2.5em;
+  text-align: center;
 }
 h3 {
   margin-bottom: 1.2rem;
@@ -59,10 +60,9 @@ li a {
 .cube-container {
   position: relative;
   transform-style: preserve-3d;
-  animation: spin;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  -webkit-animation: webkit-spin 30s linear infinite;
+  -moz-animation: moz-spin 30s linear infinite;
+  animation: spin 30s linear infinite;
 }
 
 @keyframes spin {
@@ -71,6 +71,25 @@ li a {
   }
   100% {
     transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+@-webkit-keyframes webkit-spin {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@-moz-keyframes moz-spin {
+  from {
+    -moz-transform: rotate3d(0, 0, 0, 0);
+  }
+
+  to {
+    -moz-transform: rotate3d(0, 1, 0, 360deg);
   }
 }
 .cube {
@@ -109,8 +128,11 @@ li a {
   color: white;
   font-weight: 200;
 }
+/* main {
+  margin: 0 auto;
+} */
 
-section {
+.section {
   height: 70vh;
   display: grid;
   place-items: center;
@@ -118,6 +140,7 @@ section {
 
 .card {
   width: 400px;
+  cursor: pointer;
 }
 .card-container {
   text-align: center;
@@ -155,15 +178,17 @@ section {
 }
 .game {
   background-image: url(img/game.PNG);
+  top: -30px;
 }
 .tailor {
   background-image: url(img/tailor.PNG);
 }
-
+.quiz {
+  background-image: url(img/quiz.PNG);
+}
 .card-img::before {
   content: "";
   position: absolute;
-
   transform: translateZ(3rem);
 }
 
@@ -173,13 +198,26 @@ section {
 }
 .card-description a {
   color: rgb(226, 226, 89);
+  cursor: pointer;
 }
 .card-back {
   transform: rotateY(180deg);
   background-color: rgba(150, 151, 175, 0.4);
   color: rgb(198, 224, 233);
 }
-#contact {
+
+.about p {
+  color: rgb(198, 224, 233);
+  width: 30%;
+  margin: 2rem auto 2.5rem auto;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid rgb(187, 220, 231);
+  border-radius: 4px;
+  padding: 25px;
+  box-shadow: 1px 2px 20px rgb(86, 167, 194);
+}
+.contact {
   color: rgb(125, 207, 235);
   text-align: center;
   line-height: 1.8rem;
@@ -187,11 +225,97 @@ section {
   margin: 20px;
   padding-bottom: 2rem;
 }
-#contact h2 {
-  font-size: 1.7rem;
-  margin-bottom: 20px;
-}
-#contact a {
+
+.contact a {
   color: rgb(198, 224, 233);
   text-decoration: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  color: rgb(198, 224, 233);
+  font-size: 0.8em;
+  margin: 20px auto 0 auto;
+  width: 40%;
+}
+form label {
+  text-align: left;
+  font-size: 1.2em;
+  padding: 10px;
+}
+form input,
+#message {
+  padding: 10px;
+  font-size: 14px;
+  background-color: rgb(187, 220, 231);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+form button {
+  font-size: 1.5em;
+  padding: 10px;
+  width: 130px;
+  margin: 1.5em auto;
+  background-color: rgb(86, 167, 194);
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: rgb(64, 76, 80);
+  transform: scaleY(0.95);
+}
+form input:focus,
+#message:focus {
+  background-color: #fff;
+}
+#message {
+  height: 120px;
+}
+#message::placeholder {
+  text-align: left;
+}
+@media screen and (max-width: 450px) {
+  body {
+    width: 80%;
+    margin: 20px auto;
+  }
+  main {
+    width: 100%;
+  }
+  .wrapper {
+    perspective: 1500px;
+  }
+  .section {
+    margin: 20px auto 200px auto;
+  }
+  .card {
+    width: 300px;
+  }
+  form {
+    width: 300px;
+  }
+  .about p {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) and (min-width: 450px) {
+  body {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .wrapper {
+    perspective: 1500px;
+  }
+  .section {
+    margin: 20px auto 100px auto;
+  }
+  .about p {
+    width: 60%;
+  }
+  form {
+    width: 80%;
+  }
 }
