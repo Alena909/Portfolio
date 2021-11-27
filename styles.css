@@ -119,6 +119,7 @@ li a {
 .section {
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 
 .card {
@@ -128,6 +129,7 @@ li a {
 .card-container {
   text-align: center;
   position: relative;
+  cursor: pointer;
   padding: 15em 5em;
   transition: transform 4s;
   transform-style: preserve-3d;
@@ -135,7 +137,9 @@ li a {
 .card:hover .card-container {
   transform: rotateY(180deg);
 }
-
+.active{
+  transform: rotateY(180deg);
+}
 .card-img,
 .card-back {
   position: absolute;
@@ -144,6 +148,7 @@ li a {
   left: 0;
   right: 0;
   padding: 5em 3em;
+  cursor: pointer;
   transform-style: preserve-3d;
   display: grid;
   align-content: center;
