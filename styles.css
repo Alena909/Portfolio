@@ -67,15 +67,12 @@ li a {
 
 @keyframes spin {
   0% {
-    -webkit-transform: rotate3d(0, 1, 0, 0deg);
     transform: rotate3d(0, 1, 0, 0deg);
   }
   50% {
-    -webkit-transform: rotate3d(0, 1, 0, 180deg);
     transform: rotate3d(0, 1, 0, 180deg);
   }
   100% {
-    -webkit-transform: rotate3d(0, 1, 0, 360deg);
     transform: rotate3d(0, 1, 0, 360deg);
   }
 }
@@ -89,35 +86,27 @@ li a {
   background: rgba(150, 151, 175, 0.4);
 }
 .front {
-  -webkit-transform: translateX(-150px) translateY(-150px) translateZ(150px);
   transform: translateX(-150px) translateY(-150px) translateZ(150px);
 }
 .back {
-  -webkit-transform: translateX(-150px) translateY(-150px) translateZ(-150px)
-    rotateY(180deg);
   transform: translateX(-150px) translateY(-150px) translateZ(-150px)
     rotateY(180deg);
 }
 .right {
-  -webkit-transform: translateY(-150px) rotateY(90deg);
   transform: translateY(-150px) rotateY(90deg);
 }
 .left {
-  -webkit-transform: translateY(-150px) translateX(-300px) rotateY(270deg);
   transform: translateY(-150px) translateX(-300px) rotateY(270deg);
 }
 .bottom {
-  -webkit-transform: translateX(-150px) rotateX(90deg);
   transform: translateX(-150px) rotateX(90deg);
 }
 .top {
-  -webkit-transform: translateX(-150px) translateY(-300px) rotateX(270deg);
   transform: translateX(-150px) translateY(-300px) rotateX(270deg);
 }
 .cube-container {
   display: inline-block;
   background-color: red;
-  -webkit-transform: rotateX(90deg) rotateY(90deg);
   transform: rotateX(90deg) rotateY(90deg);
 }
 .cube::after {
@@ -185,13 +174,11 @@ li a {
 .card-img::before {
   content: "";
   position: absolute;
-  -webkit-transform: translateZ(3rem);
   transform: translateZ(3rem);
 }
 
 .card-description {
   line-height: 1.6;
-  -webkit-transform: translateZ(6rem);
   transform: translateZ(6rem);
 }
 .card-description a {
@@ -201,7 +188,6 @@ li a {
 .card-back {
   background-color: rgba(150, 151, 175, 0.4);
   color: rgb(198, 224, 233);
-  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -263,7 +249,6 @@ form button {
 }
 form button:hover {
   background-color: rgb(64, 76, 80);
-  -webkit-transform: scaleY(0.95);
   transform: scaleY(0.95);
 }
 form input:focus,
