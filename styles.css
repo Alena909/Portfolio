@@ -245,7 +245,6 @@ li a {
 }
 .contact a:hover {
   color: #fff;
- 
 }
 form {
   display: flex;
@@ -375,7 +374,7 @@ form input:focus,
   display: flex;
   align-items: center;
   z-index: 100;
-  position: fixed;
+  position: absolute;
   right: 25px;
   top: 30px;
   border-radius: 5px;
