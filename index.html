@@ -10,12 +10,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <link rel="stylesheet" href="styles.css">
     <title>Yelena Guthrie</title>
 </head>
 
 <body>
     <header>
+        <div class="mode">
+            <span id="icon-switch">
+                <span class="mode-text">Dark Mode</span>
+                <i class="fas fa-moon"></i>
+            </span>
+            <label class="mode-switch">
+                <input type="checkbox">
+                <div class="slider"></div>
+            </label>
+        </div>
         <div>
             <nav>
                 <ul>
@@ -109,6 +120,24 @@
                     </div>
                 </div>
             </div>
+            <div class="section">
+                <div class="card">
+                    <div class="card-container">
+                        <div class="card-img food">
+
+                        </div>
+                        <div class="card-back">
+                            <div class="card-description">
+                                <h3>Babushka's Food</h3>
+                                <p>Responsive website built with node.js and express, HTML5, CSS3 and use of local
+                                    storage</p>
+                                <p><a href="https://babushkasfood.com/">Study Helper</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
         <div class="about">
@@ -119,8 +148,8 @@
                 user experience.</p>
         </div>
         <div id="contact">
-            <!-- <h2>Let's Talk</h2> -->
-            <!-- <form action="get">
+            <!-- <h2>Let's Talk</h2>
+            <form action="get">
                 <label for="name">Name</label>
                 <input type="text" name="name" placeholder="Name" id="name">
                 <label for="email">Email</label>
