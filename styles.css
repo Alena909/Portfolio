@@ -198,6 +198,9 @@ li a {
 .food {
   background-image: url(img/food.jpg);
 }
+.shoppinglist {
+  background-image: url(img/shoppinglist.jpg);
+}
 .card-img::before {
   content: "";
   position: absolute;
