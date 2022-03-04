@@ -183,20 +183,20 @@ li a {
   background-position: center;
 }
 .travel {
-  background-image: url(img/travel.PNG);
+  background-image: url(img/travel.jpg);
 }
 .game {
-  background-image: url(img/game.PNG);
+  background-image: url(img/game.jpg);
   top: -30px;
 }
 .tailor {
-  background-image: url(img/tailor.PNG);
+  background-image: url(img/tailor.jpg);
 }
 .quiz {
-  background-image: url(img/quiz.PNG);
+  background-image: url(img/quiz.jpg);
 }
 .food {
-  background-image: url(img/food.PNG);
+  background-image: url(img/food.jpg);
 }
 .card-img::before {
   content: "";
