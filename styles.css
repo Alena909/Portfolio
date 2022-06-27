@@ -182,6 +182,9 @@ li a {
   background-size: cover;
   background-position: center;
 }
+.cosmetics {
+  background-image: url(img/cosmeticsshop.jpg);
+}
 .travel {
   background-image: url(img/travel.jpg);
 }
