@@ -204,6 +204,9 @@ li a {
 .shoppinglist {
   background-image: url(img/shoppinglist.jpg);
 }
+.numbers {
+  background-image: url(img/numbers.jpg);
+}
 .card-img::before {
   content: "";
   position: absolute;
